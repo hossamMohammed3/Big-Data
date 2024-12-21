@@ -46,24 +46,34 @@ li:not(.info li){
 }
 
 .main-title-section p{
-    /* width: 70%; */
     margin: auto;
     font-size: 18px;
+}
+button{
+    font-family: "Cairo", sans-serif;
+}
+@media (max-width: 767px) {
+    .main-title-section{
+        padding: 15px;
+        font-size: 15px;
+    }
+    .main-title-section p{
+        font-size: 15px;
+    }
 }
 
 /* start header */
 header{
     padding: 10px 0;
     background-color: var(--secundery-bg-color) ;
-    z-index: 100;
     position: relative;
     z-index: 20;
-    height: 80px;
+    height: fit-content;
 }
 header .header-content{
     display: flex;
-    /* margin-right: 40px ; */
     justify-content: space-between;
+    position: relative;
     
 }
 header .header-content .logo{
@@ -81,11 +91,10 @@ header .header-content .logo .img-box{
 header .header-content .logo h1{
     margin: 0 25px;
 }
-header .header-content ul.links{
-    /* width: 70%; */
+header .header-content ul.links .liContaner{
     display: flex;
     justify-content: space-evenly;
-    margin-left: 50px;
+    margin: 15px 50px 0 0;
     gap: 35px;
 }
 header .header-content ul li{
@@ -114,6 +123,84 @@ header .mode-color span:hover{
     font-size: 45px;
 
 }
+header .header-content .small{
+    display: none;
+}
+
+@media (max-width: 991px) {
+    header .header-content .logo .img-box{
+        width: 40px;
+        height: 40px;
+    }
+    header .header-content .logo h1{
+        margin: 0 18px;
+        font-size: 20px;
+    }
+    header .header-content ul.links{
+        
+        margin-left: 30px;
+        gap: 25px;
+    }
+    header .header-content ul li{
+        font-size: 20px;
+        
+    }
+    header .header-content .mode-color span{
+        font-size: 30px;
+        margin-top: -10px;
+        margin-right: 10px;
+    }
+    header .mode-color span:hover{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 767px) {
+    header .header-content .logo h1{
+        margin: 0 5px;
+        font-size: 20px;
+    }
+    header .header-content ul.links{
+        display: block;
+        margin: 15px 50px 0 0;
+        top: 30px;
+        direction: ltr;
+    }
+    header .header-content ul.links li{
+        font-size: 15px;
+    }
+    header .header-content ul.links li:first-child{
+        margin-top: 40px;
+    }
+    header .header-content ul.links .liContaner{
+        direction: ltr;
+        margin-top: 10px;
+        display: none;
+        font-size: 10px;
+    }
+    header .header-content ul.links .liContaner.view{
+        transition: 1s;
+        display: block;
+    }
+    header .header-content .mode-color{
+        position: absolute;
+        left: 30%;
+    }
+    header .header-content .mode-color span{
+        font-size: 25px;
+        padding: 2px;
+
+    }
+    header .header-content .small{
+        display: block;
+        cursor: pointer;
+        font-size: 25px;
+        position: absolute;
+    }
+
+}
+
+/* end header */
 /* start landing page */
 
 section.landing{
@@ -186,7 +273,27 @@ section.landing .contant p{
     border-radius: 10px;
     text-align: center;
 }
-
+@media (max-width: 991px) {
+    section.landing .contant .title{
+        font-size: 20px;
+    }
+    section.landing .contant .title{
+        font-size: 20px;
+    }
+    section.landing .contant p{
+        font-size: 20px;
+    }
+}
+@media (max-width: 767px) {
+    section.landing .contant .title{
+        font-size: 15px;
+    }
+    section.landing .contant p{
+        font-size: 15px;
+        width: 95%;
+        padding: 5px;
+    }
+}
 /*  landing page */
 
 /*start what dose */
@@ -196,6 +303,7 @@ section.whatDose{
 }
 section.whatDose .container{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
 }
@@ -205,17 +313,37 @@ section.whatDose .container .content{
 }
 section.whatDose .container .content i{
     background-color: var(--secundery-bg-color);
-    color: orange;
+    color: var(--main-text-color);
     padding: 30px;
     border-radius: 50%;
     font-size: 35px;
     margin-bottom: 8px;
+}
+section.whatDose .container .content i:hover{
+    border: 1px solid orange;
+        color: orange;
 }
 section.whatDose .container .content p{
     font-size: 13px;
     line-height: 1.5;
     margin-top: 5px;
 }
+@media (max-width: 991px) {
+    section.whatDose .container{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+    section.whatDose .container .content{
+        width: calc(100% / 3 - 10px);
+    }
+}
+@media (max-width: 767px) {
+    section.whatDose .container .content{
+        width: calc(100% / 2 - 10px);
+    }
+}
+
 
 /*end what dose */
 
@@ -259,6 +387,43 @@ section.About-us{
     color: orange;
 
 }
+@media (max-width: 991px) {
+    .About-us .container .text{
+        width: 60%;
+    }
+    .About-us .container img{
+        width: 300px;
+        height: 300px;
+        margin-top: 60px;
+    }
+    .About-us .container .text button{
+        font-size: 20px;
+        padding: 5px 10px;
+        margin: 20px 0 0 ;
+    }
+    .About-us .container .text button:hover{
+        font-size: 23px;
+    }
+}
+@media (max-width: 767px) {
+    .About-us .container .text{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .About-us .container .text button{
+        font-size: 15px;
+        padding: 5px 10px;
+        margin: 10px 0 0 ;
+    }
+    .About-us .container .text button:hover{
+        font-size: 18px;
+    }
+    .About-us .container img{
+        display: none;
+    }
+    
+}
+
 /* end About-us */
 
 /* start Our-services */
@@ -282,6 +447,10 @@ section.Our-services{
     padding: 50px 15px 20px;
     position: relative;
 }
+.Our-services .cardes .card:hover{
+    transform: scale(1.1);
+    border: 2px solid orange;
+}
 .Our-services .cardes .card i{
     position: absolute;
     top: 0;
@@ -291,6 +460,29 @@ section.Our-services{
     padding: 20px;
     border-radius: 50%;
     background-color: orange;
+}
+@media (max-width: 991px) {
+    .Our-services .cardes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+}
+@media (max-width: 676px) {
+    .Our-services .cardes{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .Our-services .cardes .card i{
+        position: absolute;
+        top: 40px;
+    }
+    .Our-services .cardes .card h3{
+        margin-top: 25px;
+    }
 }
 /* end Our-services */
 
@@ -328,18 +520,32 @@ section.our-portfolio{
     bottom: -25px;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 25px;
+    /* font-size: 18px; */
     border: 1px solid var(--text-color);
-    padding: 10px 5px;
+    padding: 5px;
     background-color: var(--main-text-color);
     transition: .5s;
     color: var(--bg-color);
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
 }
 .our-portfolio .projects .proj button:hover{
     color: orange;
     border: 1px solid orange;
+}
+@media (max-width: 991px) {
+    .our-portfolio .projects{
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+    }
+
+}
+@media (max-width: 767px) {
+    .our-portfolio .projects{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
 }
 /* end our-portfolio */
 
@@ -368,7 +574,7 @@ section.our-portfolio{
     font-weight: bold;
     transition: .5s;
 }
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .Up{
         width: 35px;
         height: 35px;
@@ -378,7 +584,7 @@ section.our-portfolio{
     .Up span{
         font-size: 17px;
     }
-}
+} */
 
 /* end up button */
 

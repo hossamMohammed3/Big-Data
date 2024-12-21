@@ -74,3 +74,11 @@ section.landing p{
 .what-bigData{
     background-color: var(--secundery-bg-color);
 }
+
+/* start size-bog-ata */
+
+.size-bog-ata{
+    background-color: var(--bg-color);
+}
+
+/* end size-bog-ata */

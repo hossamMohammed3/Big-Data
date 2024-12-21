@@ -2,7 +2,6 @@
 console.log("hello");
 
 const ALLdivs = document.querySelectorAll(".landing .card-1");
-console.log(ALLdivs);
 
 let startIndex = 0;
 
@@ -43,7 +42,6 @@ window.addEventListener("scroll", ()=>{
     }
 })
 
-console.log(upButton);
 upButton.onclick=()=>{
     window.scrollTo({
         top: 0,
@@ -83,3 +81,14 @@ document.documentElement.style.setProperty("--tranparent-bg-color", "#1e1e2fcb")
 
 // // end color mode
 
+// start responcive
+
+let iconClick = document.querySelector(".links .small")
+iconClick.addEventListener("click",()=>{
+    AllLi = document.querySelector(".links .liContaner").classList.toggle("view");
+    
+})
+
+
+
+// end responcive

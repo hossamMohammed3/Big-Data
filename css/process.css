@@ -261,6 +261,7 @@ section.start-new-proj form input:focus{
     transform: scale(1.1);
 }
 section.start-new-proj form input.submit{
+    font-family: "Cairo", sans-serif;
     background-color: transparent; 
     display: block;
     width: 75%;
