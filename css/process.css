@@ -90,7 +90,6 @@ section.People-About-Us{
 section.People-About-Us .container{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 .People-About-Us .container .card{
     display: flex;
@@ -139,6 +138,9 @@ section.People-About-Us .container{
     }
 }
 @media (max-width: 767px) {
+    section.People-About-Us .container{
+        flex-wrap: wrap;
+    }
     .People-About-Us hr{
         display: none;
     }
