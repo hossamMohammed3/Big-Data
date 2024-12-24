@@ -14,6 +14,12 @@
     text-decoration: underline ;
     color: orange;
 }
+@media (max-width: 767px) {
+    .main-title-section h2{
+        font-size: 20px;
+    }
+    
+}
 /* start landing page */
 
 section.landing{
@@ -46,7 +52,22 @@ section.landing p{
 
     }
 }
+
+@media (max-width: 991px) {
+    section.landing p{
+        width: 80%;
+    }
+}
+@media (max-width: 767px) {
+    section.landing p{
+        font-size: 20px;
+        width: 90%;
+        padding: 7px;
+    }
+}
 /* end landing page  */
+
+/* start sections */
 
 .info{
     margin-right: 40px;
@@ -74,11 +95,160 @@ section.landing p{
 .what-bigData{
     background-color: var(--secundery-bg-color);
 }
+@media (max-width: 767px) {
+    .info{
+        margin-right: 30px;
+    }
+    .info ol li dt{
+        font-size: 18px;
+    }
+    .video .title{
+        font-size: 15px;
+    }
+    .video video{
+        height: 300px;
+    }
+}
 
-/* start size-bog-ata */
+/* start Uses-big-data */
+.Uses-big-data .video{
+    display: inline-block; 
+    width: 45%;
+    margin-left: 40px;
+}
+@media (max-width: 767px) {
+    .Uses-big-data .video{
+        display: inline;
+    }
+    .Uses-big-data .video video{
+        height: 210px;
+    }
+}
 
-.size-bog-ata{
+/* end Uses-big-data */
+
+/* start size-big-ata */
+
+.size-big-ata{
     background-color: var(--bg-color);
 }
 
-/* end size-bog-ata */
+/* end size-big-ata */
+
+/* start footer */
+
+footer{
+    background-color: var(--secundery-bg-color);
+    direction: ltr;
+    padding: 30px 10px;
+    width: 100%;
+
+}
+footer *{
+    direction: ltr;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+footer .container div:first-child{
+    width: 35%;
+}
+footer .container .title{
+    font-size: 30px;
+    color: orange;
+
+}
+footer .container .abut-me img{
+    height: 60px;
+}
+footer .container .abut-me h3{
+    margin: -70px 0 0 50%;
+}
+footer .container .abut-me p{
+    font-size: 20px;
+    text-align: justify;
+}
+footer .services h3{
+    font-size: 30px;
+}
+footer .services li{
+    font-size: 20px;
+}
+footer .container li:hover,
+footer .container i:hover{
+    color: orange;
+}
+footer .container .contact-me ul{
+    font-size: 20px;
+}
+footer .container .contact-me ul i{
+    margin-right: 5px;
+}
+footer .container .contact-me .folo i{
+    margin-right: 15px;
+    font-size: 30px;
+}
+footer .main-end{
+    width: 100vw;
+    background-color: var(--bg-color);
+    margin-bottom: -20px;
+
+}
+footer .end {
+    width: fit-content;
+    position: relative;
+    left:200px; 
+    animation: animat 20s linear infinite reverse;
+    margin: 10px 0;
+}
+
+@keyframes animat {
+    0% {
+        left: 0; 
+    }
+    50% {
+        left: 55%; 
+    }
+    100% {
+        left: 110%; 
+    }
+}
+
+footer .end span{
+    color: orange;
+}
+@media (max-width: 767px) {
+    footer .container div:first-child{
+        width: 100%;
+    }
+    footer .container div.contact-me{
+        width: 60%;
+    }
+    footer .container .title{
+        font-size: 20px;    
+    }
+    footer .container hr.first{
+        display: none;
+    }
+    footer .container .abut-me img{
+        height: 40px;
+        margin-bottom: 20px;
+    }
+    footer .services li{
+        font-size: 15px;
+    }
+    footer .container .contact-me ul{
+        font-size: 15px;
+        margin-left: -20px;
+    }
+    footer .container .contact-me .folo i{
+        font-size: 15px;
+    }
+    footer .end {
+        font-size: 20px;
+    }
+}
+/* end footer */

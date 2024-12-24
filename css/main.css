@@ -60,6 +60,10 @@ button{
     .main-title-section p{
         font-size: 15px;
     }
+    .container{
+        width: 95%;
+        margin: auto;
+    }
 }
 
 /* start header */
